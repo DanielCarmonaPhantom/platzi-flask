@@ -11,4 +11,5 @@ def index():
 @app.route('/hello')
 def hello():
     user_ip = request.cookies.get('user_id')
+    # return user_ip
     return render_template('index.html', user_ip=user_ip)
