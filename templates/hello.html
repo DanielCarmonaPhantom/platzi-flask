@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macro %}
-    
+
 
 {% block title %} 
     {{ super() }}
 Bienvenido 
 {% endblock %}
 {% block content%}
-    {% if user_ip %}
+    <!-- {% if user_ip %} -->
         <h1>Hola mundo en platzi, tu IP es{{ user_ip }}</h1>
-    {% else %}
+    <!-- {% else %} -->
         <a href="{{ url_for('index') }}">Ir a inicio</a>
-    {% endif %}
+    <!-- {% endif %} -->
     <ul>
         {% for todo in todos%}
             {{ macro.render_todo(todo) }}
