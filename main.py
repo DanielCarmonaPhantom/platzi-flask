@@ -1,5 +1,9 @@
 from flask import Flask, make_response, redirect, request, render_template
+from flask_bootstrap import Bootstrap4
+
 app = Flask(__name__)
+
+bootstrap = Bootstrap4(app)
 
 template_folder = './templates'
 static_folder = './static'
